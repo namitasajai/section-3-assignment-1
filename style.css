@@ -1,0 +1,28 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+}
+
+.code {
+ background-color: rgb(39, 39, 39);
+}
+
+cbody {
+    color: rgb(255, 255, 255);
+}
+
+brackets {
+    color: rgb(255, 238, 0);
+}
+
+type {
+    color: rgb(47, 172, 254);
+}
+
+parentheses {
+    color: rgb(212, 56, 255)
+}
+
+params {
+    color: rgb(202, 255, 123);
+}
