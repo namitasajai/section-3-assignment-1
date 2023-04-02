@@ -15,12 +15,27 @@ brackets {
     color: rgb(255, 238, 0);
 }
 
+lyellow {
+    color: rgb(254, 246, 140);
+}
+
+lorange {
+    color: rgb(255, 178, 35)
+}
+
+turquoise {
+    color: rgb(64, 224, 149)
+}
 type {
     color: rgb(47, 172, 254);
 }
 
 parentheses {
     color: rgb(212, 56, 255)
+}
+
+lpurple {
+    color: rgb(227, 124, 255)
 }
 
 params {
