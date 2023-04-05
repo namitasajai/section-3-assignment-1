@@ -1,13 +1,18 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
-    text-align: left;
+    text-align: center;
 }
 
 .code {
  background-color: rgb(39, 39, 39);
+ text-align: left;
 }
 
 cbody {
+    color: rgb(255, 255, 255);
+}
+
+p {
     color: rgb(255, 255, 255);
 }
 
@@ -40,4 +45,52 @@ lpurple {
 
 params {
     color: rgb(202, 255, 123);
+}
+
+code-instruction {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+code-instruction, kbd, pre, samp {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(255, 241, 174); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 187, 0); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(182, 97, 231); 
+}
+
+.one-tab {
+    margin-left: 20px;
+}
+
+.two-tab {
+    margin-left: 40px;
+}
+
+.three-tab {
+    margin-left: 60px;
 }
