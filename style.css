@@ -1,7 +1,7 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-    background-color: rgb(233, 216, 192);
+    background-color: rgb(247, 239, 228);
     overflow-x: hidden; 
     padding: 20px; 
 }
@@ -97,10 +97,10 @@ img {
 
 @media (min-width: 1300px) {
     .image {
-        margin-left: 500px; 
+        margin-left: 400px; 
     }
     .center {
-       margin-right: 0px; 
+       margin-right: 100px; 
     }
   }
   @media (max-width: 600px) {
@@ -145,6 +145,7 @@ img {
 }
 
 #introduction {
+    margin-top: 50px; 
     display: none; 
 }
 
