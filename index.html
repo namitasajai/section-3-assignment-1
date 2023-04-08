@@ -1,104 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>PBJ</title>
 </head>
-<body>
-    <h1>    PBJ 1200: Introduction to Peanut Butter and Jelly
+
+<body style="padding: 20px">
+    <h1> PBJ 1200: Introduction to Peanut Butter and Jelly
     </h1>
     <h3>🥜 🧈 🍇 🍞 🥛 🍽️ 🥪</h3>
-    <form> What is your name? <input id="name-text" type="text"> <button>🥜</button></form>
+    <div class="image">
+        <div class="left"> 
+            <img src="images/pbj.png" alt="">
+            <div class="questions" id="questions">What is your name?</div>
+        </div>
+        <div class="right"> 
+            <div class="center"> 
+            <input required id="name-text" type="text"> <button id="input-btn" onclick="changeQuestion()">🥜</button>
+            </div>
+        </div>
+    </div>
+    <!-- I have this hidden for now until the javascript for the above is implemented and depending on
+    whether you guys like this  -->
+    <div style="position: relative; display: none"> 
+    <form> What is your name? </form>
+    <br> 
     <form>What is your major? <input id="major-text" type="text"> <button>🍇</button></form>
+    <br> 
     <form> Do you like computer science? <br>
         Yes <input type="checkbox"><br>
         Yes is the only right answer <input type="checkbox"> </form>
+        <br> 
     <form> Do you like PB&J? <br>
-        Yes! <input type="checkbox"><br> 
+        Yes! <input type="checkbox"><br>
     </form>
-    <br>
-    <div> Hello, ______! As a _____ student who likes peanut butter & jelly, you should know how to make one! Well, you're in luck as we will teach you how to code the tastiest PB&J ever <3 <br>
-    <br>
-Sadly, no one is perfect and this code is ridden with bugs!<br>
-Since no want wants a bug-infested PB&J, help us debug everything and you will be rewarded handsomely. </p>
-<button> START</button>
-    <h2>    Part 1: Prepare the Bread
-    </h2>
-    <h4> Files to submit: <code-instruction>Bread.java</code-instruction>, <code-instruction>Knife.java</code-instruction> 
-    </h4>
-    <div class="code" id="part-1">
-        <br>
-        <type>public class </type><cbody>PBAndJ</cbody><brackets> {</brackets>
-            <p class="one-tab">
-            <cbody>
-                <turquoise>boolean</turquoise> <type>isCut</type> = false; <br>
-                
-                <type>public static void </type><cbody>main<parentheses>()</parentheses></cbody><brackets> {</brackets>
-                    <br>
-                    <p class="two-tab">
-                    <type>Bread </type> <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{</brackets> <br>
-                        <p class="three-tab">
-                            <type>Bread </type> <lyellow>buttonBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
-                            <type>Knife </type> <lyellow>knife</lyellow> = <type>new</type> Knife(); 
-                        </p>
-                    <p class="two-tab">    <brackets>}</brackets> 
-                    </p>
-                    <p class="one-tab">   <brackets>}</brackets></p>
-                <brackets>}</brackets>
-                <br>
-                <p>
-                <br>
-                <type>class </type><cbody>Bread</cbody><brackets> {</brackets> <br>
-                    <turquoise>boolean</turquoise> <type>spreaded;</type><br>
-                    <turquoise>boolean</turquoise> <type>isCut;</type><br>
-                    <turquoise>boolean</turquoise> <type>spreaded;</type><br>
-                    <turquoise>boolean</turquoise> <type>spreaded;</type><br>
-
-
-                    boolean spreaded; 
-                    boolean isCut; 
-                    boolean isToasted; 
-                    String expDate;
-                    String flavor;
-                
-                    Bread(String flavor) {
-                        expDate = date.today().toString(); 
-                        isToasted = false; 
-                        this.flavor = flavor;
-                        this.spreaded = false; 
-                        this.cut = false; 
-                
-                    }
-                
-                    public String getExpDate() {
-                        return expDate;
-                    }
-                }
-                
-            </p>
-            </cbody>    
     </div>
-    
     <br>
-    <a>Click here to proceed to 
-        <h3> Part 2: Prepare the Jelly</h3></a>
+    <div id="introduction"> 
+        Hello, <span id="name"></span>! As a <span id="major"></span> student who likes peanut butter & jelly, you should know how to make one! Well,
+        you're in luck as we will teach you how to code the tastiest PB&J ever <3 <br>
+            <br>
+        Sadly, no one is perfect and this code is ridden with bugs!<br>
+        Since no want wants a bug-infested PB&J, help us debug everything and you will be rewarded handsomely. </p>
+    </div>
+            <button> START</button>
+            <h2> Part 1: Prepare the Bread
+            </h2>
+            <h4> Files to submit: <code-instruction>Bread.java</code-instruction>,
+                <code-instruction>Knife.java</code-instruction>
+            </h4>
+            <div class="code" id="part-1">
+                <br>
+                <type>public class </type>
+                <cbody>PBAndJ</cbody>
+                <brackets> {</brackets>
+                <p class="one-tab">
+                    <cbody>
+                        <turquoise>boolean</turquoise>
+                        <type>isCut</type> = false; <br>
+
+                        <type>public static void </type>
+                        <cbody>main<parentheses>()</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <br>
+                        <p class="two-tab">
+                            <type>Bread </type>
+                            <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
+                            </brackets> <br>
+                        <p class="three-tab">
+                            <type>Bread </type>
+                            <lyellow>buttonBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
+                            <type>Knife </type>
+                            <lyellow>knife</lyellow> = <type>new</type> Knife();
+                        </p>
+                        <p class="two-tab">
+                            <brackets>}</brackets>
+                        </p>
+                        <p class="one-tab">
+                            <brackets>}</brackets>
+                        </p>
+                        <brackets>}</brackets>
+                        <br>
+                        <p>
+                            <br>
+                            <type>class </type>
+                            <cbody>Bread</cbody>
+                            <brackets> {</brackets> <br>
+                            <turquoise>boolean</turquoise>
+                            <type>spreaded;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>isCut;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>spreaded;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>spreaded;</type><br>
+
+
+                            boolean spreaded;
+                            boolean isCut;
+                            boolean isToasted;
+                            String expDate;
+                            String flavor;
+
+                            Bread(String flavor) {
+                            expDate = date.today().toString();
+                            isToasted = false;
+                            this.flavor = flavor;
+                            this.spreaded = false;
+                            this.cut = false;
+
+                            }
+
+                            public String getExpDate() {
+                            return expDate;
+                            }
+                            }
+
+                        </p>
+                    </cbody>
+            </div>
+
+            <br>
+            <a>Click here to proceed to
+                <h3> Part 2: Prepare the Jelly</h3>
+            </a>
+            <div class="code wrap" id="part-2">
+                <div class="box1 scrollBox1">
+                    <type>public class </type><cbody>PBAndJ</cbody><brackets> {</brackets>
+                    <div class="one-tab">
+                        <cbody>
+                        <turquoise>boolean</turquoise><type> isCut</type> = false; <br>
+                        <br> 
+                        <type>public static void </type><cbody>main<parentheses>()</parentheses></cbody><brackets> {</brackets>
+                        <br>
+                        <div class="two-tab">
+                            <type>Bread </type><lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{</brackets> <br>
+                            <div class="three-tab">
+                                <type>Bread </type>
+                                <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
+                                <type>Knife </type>
+                                <lyellow>knife</lyellow> = <type>new</type> Knife(); <br>
+                                <type>PeanutButter</type>
+                                <lyellow>pb</lyellow> = <type>new</type> PeanutButter(); <br>
+                                <lyellow>knife</lyellow>.spreadPB(pb);
+                            </div>
+                            <brackets>}</brackets>
+                        </div>
+                    <brackets>}</brackets>
+                    </div>
+                    <brackets>}</brackets>
+                    <br>
+                    <br>
+                    </cbody>
+                </div>
+                <div class="box2 scrollBox2">
+                    <!-- Bread class -->
+                    <type>class </type>
+                    <cbody>Bread</cbody>
+                    <brackets> {</brackets> <br>
+                    <cbody>
+                        <div class="one-tab">
+                            <turquoise>boolean</turquoise>
+                            <type>spreaded;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>isCut;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>isToasted;</type><br>
+                            <turquoise>String</turquoise>
+                            <type>expDate;</type><br>
+                            <turquoise>String</turquoise>
+                            <type>flavor;</type><br>
+                        </div>
+                        <br>
+                        <!-- Bread constructor within Bread class -->
+                        <div class="one-tab"> 
+                            <cbody>Bread<parentheses>(<type>String </type>
+                                <cbody>flavor</cbody>)
+                            </parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="one-tab">
+                            expDate = date.today().toString();
+                            <br>
+                            isToasted = false;
+                            <br>
+                            this.flavor = flavor;
+                            <br>
+                            this.spreaded = false;
+                            <br>
+                            this.cut = false;
+                        </div>
+                        <brackets> }</brackets>
+                        <br>
+                        <br>
+                        <!-- getExpDate method within Bread class -->
+                        <type>public String </type>
+                        <cbody>getExpDate<parentheses>()</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="two-tab">
+                            return expDate;
+                        </div>
+                        <brackets> }</brackets>
+                        </div>
+                    <brackets> }</brackets>
+                        
+                    </cbody>
+                    <br> 
+                    <br>
+                    <!-- PeanutButter class -->
+                    <type>class </type>
+                    <cbody>PeanutButter</cbody>
+                    <brackets> {</brackets> <br>
+                    <cbody>
+                        <!-- beginning of one-tab -->
+                        <div class="one-tab">
+                            <turquoise>boolean</turquoise>
+                            <type>isAllergic;</type><br>
+                        <br>
+                        <!-- Bread constructor within Bread class -->
+                        <cbody>PeanutButter<parentheses>()</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                            <div class="two-tab">
+                                isAllergic = true;
+                            </div>
+                            <brackets> }</brackets>
+                        </div> 
+                        <!-- ending of one-tab  -->
+                    <brackets> }</brackets>
+                    <!-- end of Peanut Butter class -->
+                    <br>
+                    <br> 
+                    <!-- Knife class -->
+                    <type>class </type>
+                    <cbody>Knife extends Bread, PBAndJ </cbody>
+                    <brackets> {</brackets> <br>
+                    <cbody>
+                        <!-- beginning of one-tab -->
+                        <div class="one-tab">
+                        <!-- Knife constructor within Knife class -->
+                        <cbody>Knife<parentheses>()</parentheses>
+                        </cbody>
+                        <brackets>{</brackets>
+                        <brackets>}</brackets>
+                        <br>
+                        <br>
+                        <!-- spreadJelly method -->
+                        <type>public void </type>
+                        <cbody>spreadJelly<parentheses>(<type>JellyJar </type>
+                            <cbody>j, </cbody><type>Bread </type>
+                            <cbody>b</cbody>)</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="two-tab">
+                            b.spreaded = true;
+                        </div>
+                        <brackets> }</brackets>
+                        <br> 
+                        <br>
+                        <!-- spreadPB method -->
+                        <type>public void </type>
+                        <cbody>spreadJelly<parentheses>(<type>PeanutButter </type>
+                            <cbody>pb, </cbody><type>Bread </type>
+                            <cbody>b</cbody>)</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="two-tab">
+                            b.spreaded = true;
+                        </div>
+                        <brackets> }</brackets>
+                        <br>
+                        <br>
+                        <!-- cut method -->
+                        <type>public void </type>
+                        <cbody>cut<parentheses>(<type>PBAndJ </type>
+                            <cbody>pbj</cbody>)</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="two-tab">
+                            pbj.isCut = true;
+                        </div>
+                        <brackets> }</brackets>
+
+                    </div>
+                        <!-- ending of one-tab  -->
+                    <brackets> }</brackets>
+                    <!-- end of Knife class -->
+                    <br>
+                    <br>
+                    <!-- beginning of JellyJar class -->
+                    <type>class </type>
+                    <cbody>JellyJar</cbody>
+                    <brackets> {</brackets> <br>
+                    <cbody>
+                        <!-- beginning of one-tab -->
+                        <div class="one-tab">
+                            <turquoise>String</turquoise>
+                            <type>flavor;</type><br>
+                            <turquoise>boolean</turquoise>
+                            <type>isTight;</type><br>
+                        <br>
+                        <!-- JellyJar constructor within JellyJar class -->
+                        <cbody>JellyJar<parentheses>(<type>String </type>
+                            <cbody>flavor</cbody>)</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                            <div class="two-tab">
+                                this.<type>flavor</type> = flavor; <br>
+                                <type>isTight</type> = false; <br>
+                            </div>
+                            <brackets> }</brackets>
+                        <br>
+                        <br>
+                        <!-- spread method -->
+                        <type>public boolean </type>
+                        <cbody>openJar<parentheses>()</parentheses>
+                        </cbody>
+                        <brackets> {</brackets>
+                        <div class="two-tab">
+                            if (<type>isTight</type>)<brackets> {</brackets>
+                                <div class="three-tab">
+                                    throw <type>new</type> IllegalArgumentException(<params>"You're too weak and the jar is too tight"</params>); 
+                                </div>
+                            <brackets>} </brackets>else<brackets> {</brackets>
+                                <div class="three-tab">
+                                    return true; 
+                                </div>
+                            <brackets>} </brackets>
+                        </div>
+                        <brackets> }</brackets>
+
+                        </div> 
+                        <!-- ending of one-tab  -->
+                    <brackets> }</brackets>
+                </div>
+            </div>
 </body>
 <!-- example of how code should be color coded -->
+<br>
+            <a>Click here to proceed to
+                <h3> Part 3: Prepare the Jelly</h3>
+            </a>
 <div class="code">
-    <type>public class </type><cbody>function<parentheses>(<cbody><type>typeOfParam </type>param</cbody>)</parentheses></cbody><brackets> {</brackets>
-        <br>
-        <cbody>
-            <type>Class </type> <lyellow>name</lyellow> = <type>new</type> Class(<params>input</params>); <br>
-            <type>System.out.</type><lyellow>println</lyellow><brackets>(</brackets><lorange>"Hello World"</lorange><brackets>)</brackets>; <br>
-            <turquoise>varType</turquoise> <type>varName</type> = value; <br>
-            <lpurple>if</lpurple> <type>(!bool) { <br>
-                <br>
+    <type>public class </type>
+    <cbody>function<parentheses>(<cbody>
+                <type>typeOfParam </type>param
+            </cbody>)</parentheses>
+    </cbody>
+    <brackets> {</brackets>
+    <br>
+    <cbody>
+        <type>Class </type>
+        <lyellow>name</lyellow> = <type>new</type> Class(<params>input</params>); <br>
+        <type>System.out.</type>
+        <lyellow>println</lyellow>
+        <brackets>(</brackets>
+        <lorange>"Hello World"</lorange>
+        <brackets>)</brackets>; <br>
+        <turquoise>varType</turquoise>
+        <type>varName</type> = value; <br>
+        <lpurple>if</lpurple>
+        <type>(!bool) { <br>
+            <br>
             }<br>
-        </cbody>
-        
+    </cbody>
+
 </div>
-<script type="javascript" src="index.js"></script>
+<script>
+    let inputTxt = ""; 
+    let major = ""; 
+    let name = ""; 
+    let x = 0; 
+    function changeQuestion() {
+        inputTxt = document.getElementById("name-text").value;
+        if (x === 0) {
+            x++; 
+            name = inputTxt;
+            console.log(name); 
+            document.getElementById("questions").innerHTML = "What is your major?"
+            document.getElementById("name-text").value = "";
+        }
+        else if (x === 1) {
+            major = inputTxt; 
+            console.log(inputTxt); 
+            x++; 
+            major = inputTxt; 
+            document.getElementById("questions").innerHTML = "Do you like computer science?"
+            document.getElementById("name-text").value = "";
+        }
+
+        else if (x === 2 && (inputTxt === "Yes" || inputTxt === "yes")) {
+            x++; 
+            console.log(x); 
+            document.getElementById("questions").innerHTML = "Do you like PB&J?"
+            document.getElementById("name-text").value = "";
+        } 
+        else if (x === 2) {
+            document.getElementById("questions").innerHTML = "<u>Yes</u> is the only right answer!"
+            document.getElementById("name-text").value = "";
+        }
+        else if (x === 3 && (inputTxt === "Yes" || inputTxt === "yes")) {
+            console.log(x)
+            document.getElementById("questions").innerHTML = "Perfect..."
+            document.getElementById("name").innerHTML = name; 
+            document.getElementById("major").innerHTML = major;
+            document.getElementById("introduction").style.display = "block";  
+
+        }
+        else if (x === 3) {
+            console.log(x)
+            document.getElementById("questions").innerHTML = "Yes is the only right answer!"
+            document.getElementById("name-text").value = "";
+        }
+        
+        console.log(document.getElementById("questions")); 
+    }
+</script>
+
 </html>

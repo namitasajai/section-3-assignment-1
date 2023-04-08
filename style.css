@@ -1,13 +1,28 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
+    background-color: rgb(233, 216, 192);
+    overflow-x: hidden; 
+    padding: 20px; 
 }
 
 .code {
- background-color: rgb(39, 39, 39);
- text-align: left;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 39);
+    text-align: left;
+    padding: 20px;
 }
-
+img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin-left: 0px; 
+    margin-top: 0px; 
+}
+.image {
+    position: relative; 
+    height: 40px; 
+}
 cbody {
     color: rgb(255, 255, 255);
 }
@@ -31,6 +46,7 @@ lorange {
 turquoise {
     color: rgb(64, 224, 149)
 }
+
 type {
     color: rgb(47, 172, 254);
 }
@@ -54,8 +70,69 @@ code-instruction {
     background-color: #f9f2f4;
     border-radius: 4px;
 }
-code-instruction, kbd, pre, samp {
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+
+img {
+    position: absolute;
+    width: 300px;  
+}
+
+.left {
+    display: inline-block; 
+    width: 50%; 
+}
+.right {
+    display: inline-block; 
+    display: flex; 
+    align-items: center; 
+    width: 50%; 
+}
+
+.image {
+    display: flex; 
+    position: relative; 
+    height: 40vh; 
+    margin-left: 100px
+}
+#name-text {
+    border-radius: 10px; 
+    background: white; 
+    border: solid 2px rgb(61, 32, 17);
+    height: 20px; 
+}
+
+#introduction {
+    display: none; 
+}
+button {
+    height: 28px;
+    border-radius: 10px; 
+    border: solid 2px rgb(61, 32, 17);
+    background: white; 
+}
+input {
+    padding-left: 10px; 
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.center {
+    z-index: 100;
+    margin-top: 100px; 
+    background: white; 
+    padding: 10px; 
+    border-radius: 20px;
+}
+
+.questions {
+    position: absolute; 
+    width: 150px; 
+    margin-top:60px; 
+    margin-left:120px; 
+}
+code-instruction,
+kbd,
+pre,
+samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 button:hover {
@@ -65,22 +142,24 @@ button:hover {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(255, 241, 174); 
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(255, 187, 0); 
+    background: rgb(255, 187, 0);
+    border-radius: 10px; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(182, 97, 231); 
+    background: rgb(182, 97, 231);
 }
 
 .one-tab {
@@ -92,5 +171,47 @@ button:hover {
 }
 
 .three-tab {
-    margin-left: 60px;
+    margin-left: 50px;
+}
+
+.wrap {
+    display: flex;
+    padding: 0px;
+}
+
+.box1 {
+    border-radius: 10px; 
+    padding: 20px;
+    display: inline-block;
+    width: 50%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: rgb(54, 24, 71);
+}
+
+.box2 {
+    border-radius: 10px; 
+    padding: 20px;
+    display: inline-block;
+    width: 50%;
+    height: 60vh;
+    overflow: scroll;
+    white-space: nowrap;
+    background-color: rgb(55, 32, 9)
+}
+
+/* Track Box 1 */
+.scrollBox1::-webkit-scrollbar-track {
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Track Box 2 */
+.scrollBox2::-webkit-scrollbar-track:horizontal {
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
