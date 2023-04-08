@@ -1,0 +1,308 @@
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    background-color: rgb(233, 216, 192);
+    overflow-x: hidden; 
+    padding: 20px; 
+}
+
+.code {
+    border-radius: 10px;
+    background-color: rgb(39, 39, 39);
+    text-align: left;
+    padding: 20px;
+}
+img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin-left: 0px; 
+    margin-top: 0px; 
+}
+.image {
+    position: relative; 
+    height: 40px; 
+}
+cbody {
+    color: rgb(255, 255, 255);
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+brackets {
+    color: rgb(255, 238, 0);
+}
+
+lyellow {
+    color: rgb(254, 246, 140);
+}
+
+lorange {
+    color: rgb(255, 178, 35)
+}
+
+turquoise {
+    color: rgb(64, 224, 149)
+}
+
+type {
+    color: rgb(47, 172, 254);
+}
+
+parentheses {
+    color: rgb(212, 56, 255)
+}
+
+lpurple {
+    color: rgb(227, 124, 255)
+}
+
+params {
+    color: rgb(202, 255, 123);
+}
+
+code-instruction {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+img {
+    position: absolute;
+    width: 300px;  
+}
+
+.left {
+    display: inline-block; 
+    width: 50%; 
+}
+.right {
+    display: inline-block; 
+    display: flex; 
+    align-items: center; 
+    width: 50%; 
+}
+
+.image {
+    display: flex; 
+    position: relative; 
+    height: 40vh; 
+    margin-left: 100px; 
+    justify-self: right; 
+}
+
+@media (min-width: 1300px) {
+    .image {
+        margin-left: 500px; 
+    }
+    .center {
+       margin-right: 0px; 
+    }
+  }
+  @media (max-width: 600px) {
+    .image {
+        margin-left: 0px; 
+    }
+    .center {
+        z-index: 0;
+        margin-top: 100px; 
+        margin-left: 40px; 
+        background: white; 
+        padding: 10px; 
+        width: 160px; 
+        border-radius: 20px;
+    }
+    #name-text {
+        width: 100px; 
+    }
+  }
+  @media (max-width: 500px) {
+    .image {
+        margin-left: 0px; 
+    }
+    .center {
+        z-index: 0;
+        margin-top: 100px; 
+        margin-left: 30px; 
+        background: white; 
+        padding: 10px; 
+        width: 140px; 
+        border-radius: 20px;
+    }
+    #name-text {
+        width: 70px; 
+    }
+  }
+#name-text {
+    border-radius: 10px; 
+    background: white; 
+    border: solid 2px rgb(61, 32, 17);
+    height: 20px; 
+}
+
+#introduction {
+    display: none; 
+}
+
+#start {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    width: 100px; 
+    height: 40px; 
+    font-size: 17px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+button {
+    height: 28px;
+    border-radius: 10px; 
+    border: solid 2px rgb(61, 32, 17);
+    background: white; 
+}
+input {
+    padding-left: 10px; 
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.center {
+    z-index: 100;
+    margin-top: 100px; 
+    background: white; 
+    padding: 10px; 
+    border-radius: 20px;
+}
+
+.questions {
+    position: absolute; 
+    width: 150px; 
+    margin-top:60px; 
+    margin-left:120px; 
+}
+code-instruction,
+kbd,
+pre,
+samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(128, 100, 74);
+    color: white; 
+}
+
+button:active {
+    background-color: rgb(91, 71, 51);
+    color: white; 
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 187, 0);
+    border-radius: 10px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(182, 97, 231);
+}
+
+.one-tab {
+    margin-left: 20px;
+}
+
+.two-tab {
+    margin-left: 40px;
+}
+
+.three-tab {
+    margin-left: 50px;
+}
+
+.wrap {
+    display: flex;
+    padding: 0px;
+}
+
+.box1 {
+    border-radius: 10px; 
+    padding: 20px;
+    display: inline-block;
+    width: 50%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    background-color: rgb(54, 24, 71);
+}
+
+.box2 {
+    border-radius: 10px; 
+    padding: 20px;
+    display: inline-block;
+    width: 50%;
+    height: 60vh;
+    overflow: scroll;
+    white-space: nowrap;
+    background-color: rgb(55, 32, 9)
+}
+
+/* Track Box 1 */
+.scrollBox1::-webkit-scrollbar-track {
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Track Box 2 */
+.scrollBox2::-webkit-scrollbar-track:horizontal {
+    background: rgb(255, 241, 174);
+    border-radius: 10px; 
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.comment {
+    color:rgb(70, 166, 121); 
+}
+
+.terminal {
+    margin-top: 20px; 
+}
+
+
+#terminalError2 {
+    display: none; 
+}
+
+.terminalError {
+    color: rgb(236, 95, 95); 
+    display: none; 
+}
+
+.run {
+    float: right; 
+    width: 70px; 
+    height: 30px; 
+    background-color: rgb(255, 178, 35);
+    font-size: 14px; 
+}
+
+.run:hover {
+    background-color: rgb(244, 191, 77); 
+}
