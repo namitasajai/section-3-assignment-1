@@ -1,7 +1,7 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-    background-color: rgb(233, 216, 192);
+    background-color: rgb(247, 239, 228);
     overflow-x: hidden; 
     padding: 20px; 
 }
@@ -91,8 +91,52 @@ img {
     display: flex; 
     position: relative; 
     height: 40vh; 
-    margin-left: 100px
+    margin-left: 100px; 
+    justify-self: right; 
 }
+
+@media (min-width: 1300px) {
+    .image {
+        margin-left: 400px; 
+    }
+    .center {
+       margin-right: 100px; 
+    }
+  }
+  @media (max-width: 600px) {
+    .image {
+        margin-left: 0px; 
+    }
+    .center {
+        z-index: 0;
+        margin-top: 100px; 
+        margin-left: 40px; 
+        background: white; 
+        padding: 10px; 
+        width: 160px; 
+        border-radius: 20px;
+    }
+    #name-text {
+        width: 100px; 
+    }
+  }
+  @media (max-width: 500px) {
+    .image {
+        margin-left: 0px; 
+    }
+    .center {
+        z-index: 0;
+        margin-top: 100px; 
+        margin-left: 30px; 
+        background: white; 
+        padding: 10px; 
+        width: 140px; 
+        border-radius: 20px;
+    }
+    #name-text {
+        width: 70px; 
+    }
+  }
 #name-text {
     border-radius: 10px; 
     background: white; 
@@ -101,8 +145,19 @@ img {
 }
 
 #introduction {
+    margin-top: 50px; 
     display: none; 
 }
+
+#start {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    width: 100px; 
+    height: 40px; 
+    font-size: 17px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
 button {
     height: 28px;
     border-radius: 10px; 
@@ -137,6 +192,13 @@ samp {
 
 button:hover {
     cursor: pointer;
+    background-color: rgb(128, 100, 74);
+    color: white; 
+}
+
+button:active {
+    background-color: rgb(91, 71, 51);
+    color: white; 
 }
 
 
@@ -214,4 +276,34 @@ button:hover {
     border-radius: 10px; 
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+}
+
+.comment {
+    color:rgb(70, 166, 121); 
+}
+
+.terminal {
+    margin-top: 20px; 
+}
+
+
+#terminalError2 {
+    display: none; 
+}
+
+.terminalError {
+    color: rgb(236, 95, 95); 
+    display: none; 
+}
+
+.run {
+    float: right; 
+    width: 70px; 
+    height: 30px; 
+    background-color: rgb(255, 178, 35);
+    font-size: 14px; 
+}
+
+.run:hover {
+    background-color: rgb(244, 191, 77); 
 }
