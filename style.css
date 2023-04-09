@@ -37,6 +37,7 @@ brackets {
 
 lyellow {
     color: rgb(254, 246, 140);
+
 }
 
 lorange {
@@ -315,6 +316,15 @@ select {
     font-family: "Lucida Console", "Courier New", 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
+#expDate {
+    background-color:rgb(39, 39, 39);
+    color: white; 
+    font-size: 15px; 
+    border: 0px;  
+    padding-left: 0px;
+    font-family: "Lucida Console", "Courier New", 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
 .proceed {
     font-family: "Lucida Console", "Courier New", sans-serif;
     border-radius: 8px;
@@ -329,3 +339,37 @@ select {
 .part {
     display: none; 
 }
+
+.progress{
+    position: relative;
+    height: 5px;
+    width: 90%;
+    border: 2px solid #f4a261;
+    border-radius: 15px;
+    display: none; 
+}
+.progress .color{
+    position: absolute;
+    background-color: #ffffff;
+    width: 0px;
+    height: 5px;
+    border-radius: 15px;
+    animation: progres 2s infinite linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
