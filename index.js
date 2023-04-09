@@ -76,4 +76,9 @@ let inputTxt = "";
     function run3() {
         document.getElementById("placeholder3").style.display = "none"; 
         document.getElementById("terminalError3").style.display = "block"; 
+        if (document.getElementById("c.tight").value === false) {
+            document.getElementById("placeholder3").innerHTML = "Hello World";
+            document.getElementById("placeholder2") .style. display = "block";
+            document.getElementById ("terminalError2" ).style.display = "none";
+        }
     }
