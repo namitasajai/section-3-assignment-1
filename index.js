@@ -47,6 +47,7 @@ let inputTxt = "";
             document.getElementById("name").innerHTML = capitalize(name); 
             document.getElementById("major").innerHTML = major.toLowerCase();
             document.getElementById("introduction").style.display = "block";  
+            document.getElementById("proceed0").style.display = "block"; 
 
         }
         else if (x === 3) {
@@ -68,12 +69,36 @@ let inputTxt = "";
     function run1() {
         document.getElementById("placeholder1").style.display = "none"; 
         document.getElementById("terminalError1").style.display = "block"; 
+
+        document.getElementById("proceed1").style.display = "block"; 
     }
     function run2() {
         document.getElementById("placeholder2").style.display = "none"; 
         document.getElementById("terminalError2").style.display = "block"; 
+        if (document.getElementById("isAllergic").value === "false" 
+        && document.getElementById("b.spreaded").value === "true") {
+            document.getElementById("placeholder2").innerHTML = "Congrats! The peanut butter has been spread!"; 
+            document.getElementById("placeholder2").style.display = "block"; 
+            document.getElementById("terminalError2").style.display = "none"; 
+            document.getElementById("proceed2").style.display = "block"; 
+        } else if (document.getElementById("b.spreaded").value === "false") {
+            document.getElementById("terminalError2").innerHTML = "Error: The peanut butter has not been spread."
+        } else {
+            document.getElementById("terminalError2").innerHTML = "Error: You're allergic to Peanut Butter!"
+        }
     }
     function run3() {
         document.getElementById("placeholder3").style.display = "none"; 
         document.getElementById("terminalError3").style.display = "block"; 
+    }
+
+    function clickStart() {
+        document.getElementById("part1").style.display = "block"; 
+    }
+
+    function proceed1() {
+        document.getElementById("part2").style.display = "block"; 
+    }
+    function proceed2() {
+        document.getElementById("part3").style.display = "block"; 
     }

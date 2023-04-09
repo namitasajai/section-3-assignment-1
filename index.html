@@ -48,105 +48,107 @@
             <br>
             Sadly, no one is perfect and this code is ridden with bugs!<br>
             Since no want wants a bug-infested PB&J, help us debug everything and you will be rewarded handsomely. </p>
-            <button id="start"> START</button>
+            <button id="start" onclick="clickStart()"> START</button>
     </div>
-    <h2> Part 1: Prepare the Bread
-    </h2>
-    <h4> Files to submit: <code-instruction>Bread.java</code-instruction>,
-        <code-instruction>Knife.java</code-instruction>
-    </h4>
-    <div class="code" id="part-1">
-        <br>
-        <type>public class </type>
-        <cbody>PBAndJ</cbody>
-        <brackets> {</brackets>
-        <p class="one-tab">
-            <cbody>
-                <turquoise>boolean</turquoise>
-                <type>isCut</type> = false; <br>
-
-                <type>public static void </type>
-                <cbody>main<parentheses>()</parentheses>
-                </cbody>
-                <brackets> {</brackets>
-                <br>
-                <p class="two-tab">
-                    <type>Bread </type>
-                    <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
-                    </brackets> <br>
-                <p class="three-tab">
-                    <type>Bread </type>
-                    <lyellow>buttonBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
-                    <type>Knife </type>
-                    <lyellow>knife</lyellow> = <type>new</type> Knife();
-                </p>
-                <p class="two-tab">
-                    <brackets>}</brackets>
-                </p>
-                <p class="one-tab">
-                    <brackets>}</brackets>
-                </p>
-                <brackets>}</brackets>
-                <br>
-                <p>
+    <div class="part" id="part1">
+        <h2> Part 1: Prepare the Bread
+        </h2>
+        <h4> Files to submit: <code-instruction>Bread.java</code-instruction>,
+            <code-instruction>Knife.java</code-instruction>
+        </h4>
+        <div class="code" id="part-1">
+            <br>
+            <type>public class </type>
+            <cbody>PBAndJ</cbody>
+            <brackets> {</brackets>
+            <p class="one-tab">
+                <cbody>
+                    <turquoise>boolean</turquoise>
+                    <type>isCut</type> = false; <br>
+    
+                    <type>public static void </type>
+                    <cbody>main<parentheses>()</parentheses>
+                    </cbody>
+                    <brackets> {</brackets>
                     <br>
-                    <type>class </type>
-                    <cbody>Bread</cbody>
-                    <brackets> {</brackets> <br>
-                    <turquoise>boolean</turquoise>
-                    <type>spreaded;</type><br>
-                    <turquoise>boolean</turquoise>
-                    <type>isCut;</type><br>
-                    <turquoise>boolean</turquoise>
-                    <type>spreaded;</type><br>
-                    <turquoise>boolean</turquoise>
-                    <type>spreaded;</type><br>
-
-
-                    boolean spreaded;
-                    boolean isCut;
-                    boolean isToasted;
-                    String expDate;
-                    String flavor;
-
-                    Bread(String flavor) {
-                    expDate = date.today().toString();
-                    isToasted = false;
-                    this.flavor = flavor;
-                    this.spreaded = false;
-                    this.cut = false;
-
-                    }
-
-                    public String getExpDate() {
-                    return expDate;
-                    }
-                    }
-
-                </p>
+                    <p class="two-tab">
+                        <type>Bread </type>
+                        <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
+                        </brackets> <br>
+                    <p class="three-tab">
+                        <type>Bread </type>
+                        <lyellow>buttonBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
+                        <type>Knife </type>
+                        <lyellow>knife</lyellow> = <type>new</type> Knife();
+                    </p>
+                    <p class="two-tab">
+                        <brackets>}</brackets>
+                    </p>
+                    <p class="one-tab">
+                        <brackets>}</brackets>
+                    </p>
+                    <brackets>}</brackets>
+                    <br>
+                    <p>
+                        <br>
+                        <type>class </type>
+                        <cbody>Bread</cbody>
+                        <brackets> {</brackets> <br>
+                        <turquoise>boolean</turquoise>
+                        <type>spreaded;</type><br>
+                        <turquoise>boolean</turquoise>
+                        <type>isCut;</type><br>
+                        <turquoise>boolean</turquoise>
+                        <type>spreaded;</type><br>
+                        <turquoise>boolean</turquoise>
+                        <type>spreaded;</type><br>
+    
+    
+                        boolean spreaded;
+                        boolean isCut;
+                        boolean isToasted;
+                        String expDate;
+                        String flavor;
+    
+                        Bread(String flavor) {
+                        expDate = date.today().toString();
+                        isToasted = false;
+                        this.flavor = flavor;
+                        this.spreaded = false;
+                        this.cut = false;
+    
+                        }
+    
+                        public String getExpDate() {
+                        return expDate;
+                        }
+                        }
+    
+                    </p>
+                </cbody>
+        </div>
+        <div class="code terminal">
+            <button class="run" onclick="run1()">
+                RUN
+            </button>
+            <cbody>
+                TERMINAL
+                <br>
+                <br>
+                <div id="placeholder1">
+                </div>
+                <div class="terminalError" id="terminalError1">
+                    Error: Bread is expired!
+                </div>
             </cbody>
+    
+        </div>
+        <br>
     </div>
-    <div class="code terminal">
-        <button class="run" onclick="run1()">
-            RUN
-        </button>
-        <cbody>
-            TERMINAL
-            <br>
-            <br>
-            <div id="placeholder1">
-            </div>
-            <div class="terminalError" id="terminalError1">
-                Error: Bread is expired!
-            </div>
-        </cbody>
-
-    </div>
-
-    <br>
-    <a>Click here to proceed to
+    <button class="proceed" id="proceed1" onclick="proceed1()">Click here to proceed
+    </button>
+    <div class="part" id="part2">
         <h3> Part 2: Prepare the Jelly</h3>
-    </a>
     <h4> Files to submit:
         <code-instruction>PeanutButter.java</code-instruction>
     </h4>
@@ -174,18 +176,14 @@
                     <br>
                     <div class="two-tab">
                         <type>Bread </type>
-                        <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
-                        </brackets> <br>
-                        <div class="three-tab">
-                            <type>Bread </type>
-                            <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
-                            <type>Knife </type>
-                            <lyellow>knife</lyellow> = <type>new</type> Knife(); <br>
-                            <type>PeanutButter</type>
-                            <lyellow>pb</lyellow> = <type>new</type> PeanutButter(); <br>
-                            <lyellow>knife</lyellow>.spreadPB(pb);
-                        </div>
-                        <brackets>}</brackets>
+                        <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>);<br>
+                        <type>Bread </type>
+                        <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
+                        <type>Knife </type>
+                        <lyellow>knife</lyellow> = <type>new</type> Knife(); <br>
+                        <type>PeanutButter</type>
+                        <lyellow>pb</lyellow> = <type>new</type> PeanutButter(); <br>
+                        <lyellow>knife</lyellow>.spreadPB(pb, bottomBread);
                     </div>
                     <brackets>}</brackets>
             </div>
@@ -272,7 +270,11 @@
                     </cbody>
                     <brackets> {</brackets>
                     <div class="two-tab">
-                        isAllergic = true;
+                        isAllergic = <select name="isAllergic" id="isAllergic">
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                            <option value="sometimes">sometimes</option>
+                        </select>;
                     </div>
                     <brackets> }</brackets>
                 </div>
@@ -312,7 +314,7 @@
                         <br>
                         <!-- spreadPB method -->
                         <type>public void </type>
-                        <cbody>spreadJelly<parentheses>(<type>PeanutButter </type>
+                        <cbody>spreadPB<parentheses>(<type>PeanutButter </type>
                                 <cbody>pb, </cbody>
                                 <type>Bread </type>
                                 <cbody>b</cbody>)
@@ -320,7 +322,10 @@
                         </cbody>
                         <brackets> {</brackets>
                         <div class="two-tab">
-                            b.spreaded = true;
+                            b.spreaded = <select name="pbSpread" id="b.spreaded">
+                                <option value="true">true</option>
+                                <option value="false">false</option>
+                            </select>;
                         </div>
                         <brackets> }</brackets>
                         <br>
@@ -363,7 +368,7 @@
                             <brackets> {</brackets>
                             <div class="two-tab">
                                 this.<type>flavor</type> = flavor; <br>
-                                <type>isTight</type> = false; <br>
+                                <type>isTight</type> = true; <br>
                             </div>
                             <brackets> }</brackets>
                             <br>
@@ -406,12 +411,14 @@
                 Error: You're allergic to Peanut Butter!
             </div>
         </cbody>
-
     </div>
+    </div>
+    
     <br>
-    <a>Click here to proceed to
+    <button class="proceed" id="proceed2" onclick="proceed2()">Click here to proceed
+    </button>
+    <div class="part" id="part3">
         <h3> Part 3: Prepare the Jelly</h3>
-    </a>
     <!-- example of how code should be color coded -->
     <div class="code">
         <type>public class </type>
@@ -452,6 +459,8 @@
                 Error: Bread is expired!
             </div>
         </cbody>
+    </div>
+    
 </body>
 
 

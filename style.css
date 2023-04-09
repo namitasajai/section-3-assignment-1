@@ -259,7 +259,7 @@ button:active {
     height: 60vh;
     overflow: scroll;
     white-space: nowrap;
-    background-color: rgb(55, 32, 9)
+    background-color: rgb(55, 32, 9);
 }
 
 /* Track Box 1 */
@@ -306,4 +306,26 @@ button:active {
 
 .run:hover {
     background-color: rgb(244, 191, 77); 
+}
+
+select {
+    background-color:rgb(55, 32, 9);
+    color: white; 
+    border: 0px;  
+    font-family: "Lucida Console", "Courier New", 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+.proceed {
+    font-family: "Lucida Console", "Courier New", sans-serif;
+    border-radius: 8px;
+    width: 200px;
+    height: 40px; 
+    font-size: 13px; 
+    display: none; 
+    margin: auto;
+}
+
+
+.part {
+    display: none; 
 }
