@@ -62,28 +62,30 @@
         <brackets> {</brackets>
         <p class="one-tab">
             <cbody>
-                <turquoise>boolean</turquoise>
-                <type>isCut</type> = false; <br>
-
-                <type>public static void </type>
+                <type>public static void</type> 
+                    assemble
+                    <parentheses>(</parentheses>Bread b1, Bread b2<parentheses>)</parentheses><brackets> {</brackets> <br>
+                    <div class = "two-tab">
+                        <type>System.out.</type><lyellow>println</lyellow><brackets> (</brackets><lorange>"Hello World"</lorange><brackets>)</brackets>;
+                    </div>
+                       <p class = "one-tab"> <brackets>}</brackets></p>
+                    <br>
+                
+                <p class="two-tab"><type>public static void </type>
                 <cbody>main<parentheses>()</parentheses>
                 </cbody>
                 <brackets> {</brackets>
                 <br>
-                <p class="two-tab">
+                    <p class="three-tab">
                     <type>Bread </type>
-                    <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
-                    </brackets> <br>
-                <p class="three-tab">
+                    <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>) <br>
                     <type>Bread </type>
-                    <lyellow>buttonBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
+                    <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
                     <type>Knife </type>
                     <lyellow>knife</lyellow> = <type>new</type> Knife();
+                    </p>
                 </p>
                 <p class="two-tab">
-                    <brackets>}</brackets>
-                </p>
-                <p class="one-tab">
                     <brackets>}</brackets>
                 </p>
                 <brackets>}</brackets>
@@ -164,8 +166,14 @@
             <brackets> {</brackets>
             <div class="one-tab">
                 <cbody>
-                    <turquoise>boolean</turquoise>
-                    <type> isCut</type> = false; <br>
+                    <type>public static void</type> 
+                    assemble
+                    <parentheses>(</parentheses>Bread b1, Bread b2<parentheses>)</parentheses><brackets>{</brackets> <br>
+                    <div class = "two-tab">
+                        <type>System.out.</type><lyellow>println</lyellow><brackets> (</brackets><lorange>"Hello World"</lorange><brackets>)</brackets>;
+                    </div>
+                        <brackets>}</brackets>
+                    <br>    
                     <br>
                     <type>public static void </type>
                     <cbody>main<parentheses>()</parentheses>
@@ -176,7 +184,6 @@
                         <type>Bread </type>
                         <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
                         </brackets> <br>
-                        <div class="three-tab">
                             <type>Bread </type>
                             <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
                             <type>Knife </type>
@@ -184,7 +191,6 @@
                             <type>PeanutButter</type>
                             <lyellow>pb</lyellow> = <type>new</type> PeanutButter(); <br>
                             <lyellow>knife</lyellow>.spreadPB(pb);
-                        </div>
                         <brackets>}</brackets>
                     </div>
                     <brackets>}</brackets>
@@ -312,7 +318,7 @@
                         <br>
                         <!-- spreadPB method -->
                         <type>public void </type>
-                        <cbody>spreadJelly<parentheses>(<type>PeanutButter </type>
+                        <cbody>spreadPB<parentheses>(<type>PeanutButter </type>
                                 <cbody>pb, </cbody>
                                 <type>Bread </type>
                                 <cbody>b</cbody>)
@@ -429,19 +435,24 @@
             <brackets> {</brackets>
             <div class="one-tab">
                 <cbody>
-                    <turquoise>boolean</turquoise>
-                    <type> isCut</type> = false; <br>
+                    <type>public static void</type> 
+                    assemble
+                    <parentheses>(</parentheses>Bread b1, Bread b2<parentheses>)</parentheses><brackets>{</brackets> <br>
+                    <div class = "two-tab">
+                        <type>System.out.</type><lyellow>println</lyellow><brackets> (</brackets><lorange>"Hello World"</lorange><brackets>)</brackets>;
+                    </div>
+                        <brackets>}</brackets>
+                    <br>
                     <br>
                     <type>public static void </type>
                     <cbody>main<parentheses>()</parentheses>
-                    </cbody>
+                 </cbody>
                     <brackets> {</brackets>
                     <br>
                     <div class="two-tab">
                         <type>Bread </type>
                         <lyellow>topBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>)<brackets>{
                         </brackets> <br>
-                        <div class="three-tab">
                             <type>Bread </type>
                             <lyellow>bottomBread</lyellow> = <type>new</type> Bread(<params>"wheat"</params>); <br>
                             <type>Knife </type>
@@ -450,11 +461,12 @@
                             <lyellow>pb</lyellow> = <type>new</type> PeanutButter(); <br>
                             <lyellow>knife</lyellow>.spreadPB(pb); <br>
                             <type>JellyJar</type> <lyellow>jelly</lyellow> = <type>new</type> JellyJar(<lyellow>"grape"</lyellow>); <br>
-                            
-                        </div>
+                            <lyellow>jelly</lyellow>.openJar(); <br>
+                            <lyellow>knife</lyellow>.spreadJelly(jelly, topBread);
                         <brackets>}</brackets>
                     </div>
                     <brackets>}</brackets>
+                </cbody>
             </div>
             <brackets>}</brackets>
             <br>
@@ -579,7 +591,7 @@
                         <br>
                         <!-- spreadPB method -->
                         <type>public void </type>
-                        <cbody>spreadJelly<parentheses>(<type>PeanutButter </type>
+                        <cbody>spreadPB<parentheses>(<type>PeanutButter </type>
                                 <cbody>pb, </cbody>
                                 <type>Bread </type>
                                 <cbody>b</cbody>)
@@ -678,7 +690,7 @@
     </div>
     <br>
     <!-- example of how code should be color coded -->
-    <div class="code">
+    <!-- <div class="code">
         <type>public class </type>
         <cbody>function<parentheses>(<cbody>
                     <type>typeOfParam </type>param
@@ -702,7 +714,7 @@
                 }<br>
         </cbody>
 
-    </div>
+    </div> -->
 </body>
 
 
