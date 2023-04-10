@@ -373,3 +373,29 @@ select {
         width: 100%;
     }
 };
+
+@keyframes confetti {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(calc(100vw - 100px));
+    }
+  }
+  
+.item {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #4169e1;
+	animation:  3s linear infinite alternate;
+}
+
+#confetti {
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+    width: 100px; 
+    height: 40px; 
+    font-size: 17px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}

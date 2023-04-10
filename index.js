@@ -128,6 +128,7 @@ function run3Helper() {
         document.getElementById("placeholder3").innerHTML = "Hello World";
         document.getElementById("placeholder3").style.display = "block";
         document.getElementById("terminalError3").style.display = "none";
+        document.getElementById("confetti").style.display = "block";
     }
     document.getElementById("runTxt3").style.display = "block";
     document.getElementById("load3").style.display = "none";
@@ -143,3 +144,21 @@ function proceed1() {
 function proceed2() {
     document.getElementById("part3").style.display = "block";
 }
+
+function showConfetti() {
+    var pbj1 = document.getElementById("pbj1");
+    pbj1.style.display = "block";
+    pbj1.style.animation = "confetti 3s linear infinite alternate";
+    pbj1.style.position = 'relative';
+    pbj1.style.top = "10px";
+    pbj1.style.left = "40%";
+    // pbj1.style.zIndex = "2";
+    // var pbj2 = document.getElementById("pbj2");
+    // pbj2.style.display = "block";
+    // pbj2.style.animation = "confetti 3s linear infinite alternate";
+    // pbj2.style.position = 'relative';
+    // pbj2.style.bottom = "10px";
+    // pbj2.style.left = "15%";
+    // pbj2.style.zIndex = "2";
+    document.getElementById("confetti").style.display = "none";
+  }
